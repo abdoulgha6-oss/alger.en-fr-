@@ -1,0 +1,196 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{
+  background:#CBC5B5;
+  font-family:'EB Garamond',Georgia,serif;
+  color:#1C1810;
+  min-height:100vh;
+}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:#1C1810;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;
+  height:52px;
+}
+.nav-title{
+  font-size:0.80rem;letter-spacing:0.18em;color:#F8F5EC;
+  text-decoration:none;text-transform:uppercase;opacity:0.85;
+  white-space:nowrap;
+}
+.nav-links{display:flex;gap:32px;}
+.nav-links a{
+  font-size:0.75rem;letter-spacing:0.14em;color:#F8F5EC;
+  text-decoration:none;text-transform:uppercase;opacity:0.65;
+  transition:opacity 0.2s;
+}
+.nav-links a:hover,.nav-links a.active{opacity:1;}
+.nav-links a.active{border-bottom:1px solid #F8F5EC;}
+
+/* ── PAGE WRAPPER ── */
+.page{max-width:780px;margin:0 auto;padding:48px 20px 80px;}
+.page-wide{max-width:1200px;margin:0 auto;padding:48px 20px 80px;}
+
+/* ── HERO (home) ── */
+.hero{
+  max-width:600px;margin:80px auto 0;
+  text-align:center;padding:0 20px;
+}
+.hero-author{
+  font-size:0.78rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:rgba(28,24,16,0.55);margin-bottom:24px;
+}
+.hero-title{
+  font-size:clamp(2rem,5vw,3.2rem);font-style:italic;font-weight:500;
+  line-height:1.2;color:#1C1810;margin-bottom:8px;
+}
+.hero-subtitle{
+  font-size:clamp(1rem,2.5vw,1.4rem);font-style:italic;
+  color:rgba(28,24,16,0.5);margin-bottom:40px;
+}
+.hero-rule{
+  width:40px;height:1px;background:#7A1A1A;margin:0 auto 40px;
+}
+.hero-desc{
+  font-size:0.88rem;line-height:1.85;color:rgba(28,24,16,0.7);
+  max-width:480px;margin:0 auto 52px;
+}
+.hero-nav{
+  display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+}
+.btn{
+  display:inline-block;padding:12px 28px;
+  font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;
+  text-decoration:none;border:1px solid #1C1810;color:#1C1810;
+  transition:background 0.2s,color 0.2s;
+}
+.btn:hover{background:#1C1810;color:#F8F5EC;}
+.btn-primary{background:#1C1810;color:#F8F5EC;}
+.btn-primary:hover{background:#7A1A1A;border-color:#7A1A1A;}
+
+/* ── SECTION HEADER ── */
+.section-header{
+  border-bottom:1px solid rgba(28,24,16,0.18);
+  padding-bottom:20px;margin-bottom:48px;
+}
+.section-label{
+  font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:rgba(28,24,16,0.45);display:block;margin-bottom:8px;
+}
+.section-title{
+  font-size:1.6rem;font-style:italic;font-weight:400;
+}
+
+/* ── CARD GRID (paratexts) ── */
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.card{
+  background:#F8F5EC;padding:36px 32px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.14);
+}
+.card-lang{
+  font-size:0.65rem;letter-spacing:0.20em;text-transform:uppercase;
+  color:rgba(28,24,16,0.4);margin-bottom:12px;display:block;
+}
+.card-title{
+  font-size:1.05rem;font-style:italic;font-weight:500;
+  margin-bottom:6px;
+}
+.card-author{
+  font-size:0.75rem;color:rgba(28,24,16,0.55);
+  margin-bottom:20px;
+}
+.card-excerpt{
+  font-size:0.80rem;line-height:1.78;color:rgba(28,24,16,0.75);
+  font-style:italic;border-left:2px solid #7A1A1A;padding-left:14px;
+  margin-bottom:24px;
+}
+.card-link{
+  font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;
+  text-decoration:none;color:#7A1A1A;border-bottom:1px solid currentColor;
+  padding-bottom:1px;
+}
+
+/* ── TRANSLATIONS PLACEHOLDER ── */
+.translation-item{
+  background:#F8F5EC;padding:32px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.14);
+  margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;
+}
+.translation-info .t-lang{font-size:1rem;font-style:italic;margin-bottom:4px;}
+.translation-info .t-meta{font-size:0.75rem;color:rgba(28,24,16,0.5);}
+.badge{
+  font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;
+  padding:5px 12px;border:1px solid currentColor;
+}
+.badge-done{color:#3A6B3A;}
+.badge-soon{color:rgba(28,24,16,0.35);}
+
+/* ── SIDE-BY-SIDE TEXT ── */
+.bilingual{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;
+}
+.bilingual-col{
+  background:#F8F5EC;
+  padding:56px 48px 56px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.14);
+}
+.bilingual-col:first-child{
+  border-right:1px solid rgba(28,24,16,0.08);
+}
+.col-lang-label{
+  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:rgba(28,24,16,0.4);display:block;margin-bottom:32px;
+  border-bottom:1px solid rgba(28,24,16,0.1);padding-bottom:12px;
+}
+
+/* ── POEM STYLES ── */
+.poem{font-size:0.83rem;line-height:1.95;color:#1C1810}
+.poem .st{margin-bottom:1.5em}
+.poem .l{display:block}
+.poem .i1{padding-left:2em}
+.poem .i2{padding-left:4em}
+.poem .i3{padding-left:6em}
+.poem .i4{padding-left:8em}
+.poem .ir{text-align:right}
+.poem .ref{font-style:italic;opacity:0.82}
+.poem .pn{
+  font-size:0.68rem;letter-spacing:0.12em;
+  color:rgba(28,24,16,0.35);text-align:center;
+  display:block;margin:2em 0 2.5em;
+}
+
+/* ── PARATEXT PROSE ── */
+.prose-page{background:#F8F5EC;padding:56px 64px;box-shadow:0 4px 18px rgba(0,0,0,0.14);margin-bottom:28px;}
+.prose-page .prose-head{font-size:0.85rem;font-style:italic;text-align:center;font-weight:500;margin-bottom:24px;}
+.prose-page .prose{font-size:0.85rem;line-height:1.85;text-align:justify;hyphens:auto;}
+.prose-page .prose p{margin-bottom:0.9em;text-indent:1.6em;}
+.prose-page .prose .sig{text-align:right;font-style:normal;margin-top:16px;text-indent:0;font-size:0.82rem;}
+.prose-page .lang-pair{display:flex;gap:40px;}
+.prose-page .lang-pair>div{flex:1;}
+.prose-page .lang-label{font-size:0.65rem;letter-spacing:0.20em;text-transform:uppercase;color:rgba(28,24,16,0.4);display:block;margin-bottom:16px;border-bottom:1px solid rgba(28,24,16,0.1);padding-bottom:8px;}
+
+/* ── FOOTER ── */
+footer{
+  background:#1C1810;color:rgba(248,245,236,0.45);
+  text-align:center;padding:28px 20px;
+  font-size:0.68rem;letter-spacing:0.10em;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .bilingual{grid-template-columns:1fr;}
+  .bilingual-col:first-child{border-right:none;border-bottom:1px solid rgba(28,24,16,0.08);}
+  .card-grid{grid-template-columns:1fr;}
+  .prose-page .lang-pair{flex-direction:column;gap:32px;}
+}
+@media(max-width:600px){
+  nav{padding:0 20px;}
+  .nav-title{font-size:0.70rem;}
+  .nav-links{gap:16px;}
+  .bilingual-col{padding:40px 24px;}
+  .prose-page{padding:40px 24px;}
+  .hero{margin-top:48px;}
+}
